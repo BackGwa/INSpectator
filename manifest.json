@@ -1,0 +1,27 @@
+{
+    "manifest_version" : 3,
+    "name" : "인스펙터",
+    "description" : "인스타그램에서 좋아요 실수를 줄여줍니다.",
+    "version" : "1.0.0",
+    "content_scripts" : [
+        {
+            "matches" : ["https://www.instagram.com/*"],
+            "js" : ["scripts/remover.js"]
+        }
+    ],
+    "icons" : {
+        "128" : "images/instagram.png"
+    },
+    "action" : {
+        "default_icon" : "images/instagram.png",
+        "default_title" : "인스펙터",
+        "default_popup" : "pages/index.html"
+    },
+    "permissions" : ["storage"],
+
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "backgwa@naver.com"
+        }
+      }
+}
